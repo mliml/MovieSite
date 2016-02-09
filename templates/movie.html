@@ -1,0 +1,61 @@
+$def with (movie)
+$var css: /static/css/movie_style.css
+
+	<!--页头 -->
+    <div class="jumbotron" id="ddh" >
+      <div class="container">
+      	<div class="col-md-10 col-md-offset-1">
+          <h2>$movie.title</h2>
+          <p>$movie.origin</p>
+         </div>
+      </div>
+    </div>
+	
+	<!--页面主题内容 -->
+    <div class="container" >
+    <div class="row">
+	  <!--左边栏 -->
+      <div class="col-md-7 col-md-offset-1">
+        <!--路径导航 -->
+        <div class="row">
+          <ol class="breadcrumb">
+            <li><a href="/">表格式</a> OR <a href="/card">卡片式</a></li>
+            <li class="active">$movie.title</li>
+          </ol>
+        </div>  
+		    <!--表格 -->		
+		    <div class="row">
+          <div class="col-md-12">
+  			    <div class="table-responsive">
+              <table class="table">
+                <tr>
+                  <td>国家</td>
+                  <td>年份</td> 
+                  <td>类型</td> 
+                  <td>评分</td>
+                </tr>
+                <tr>
+                  <td><h3>$movie.countries</h3></td>
+                  <td><h3>$movie.year</h3></td> 
+                  <td><h3>$movie.genres</h3></td> 
+                  <td><h3>$movie.rating</h3></td>
+                </tr>
+              </table>
+            </div>
+		      </div>
+		    </div>
+		    <!--简介 -->
+	      <div class="row">
+      	  <div class="col-md-12 ">
+			      <hr id="hr">
+			      <br>
+            <h id="summary">$movie.summary</h>
+		      </div>
+	      </div>
+      </div>
+      <!--右边栏 -->
+      <div class="col-md-3">
+        <img src="/static/poster/$(movie.id).jpg">
+      </div>
+	  </div>
+    </div>

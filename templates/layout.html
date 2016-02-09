@@ -1,0 +1,68 @@
+$def with (content)
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Movie Site</title>
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="$content.css" rel="stylesheet">
+		
+	</head>
+
+	<body>
+
+    <!--导航栏 -->		
+    <nav class="navbar navbar-default navbar-fixed-top" id="dh"role="navigation">
+      <div class="container">
+        <div class="col-md-6 col-md-offset-1">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" id="dh">Stanley Movie</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="pull-right">
+          <form class="navbar-form navbar-left"role="search" action="/" method="post" >
+            <div class="form-group">
+              <div class="center-block" >
+              <input type="text" name="title" class="form-control" placeholder="Movie Name" >
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default" >Search</button>
+          </form>
+        </div>
+        </div>
+      </div>
+    </nav> <!--导航栏 -->  
+    $:content
+    <!--尾部 -->
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1">
+        <hr>
+        <p id="center">Design by Stanley</p>
+        </br>
+        <br>
+      </div>
+    </div> <!--尾部 -->
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="static/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="tatic/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

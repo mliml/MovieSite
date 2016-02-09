@@ -1,0 +1,41 @@
+div.jumbotron div.container h1
+{
+	text-align:center;
+	color:#DCDCDC;
+}
+
+div.jumbotron div.container h3
+{
+	text-align:center;
+	color:#DCDCDC;
+}
+
+
+body
+{
+	background-color:#F0F0F0;
+	padding-top: 50px;
+}
+
+#dh
+{
+	background-color:#DCDCDC;
+	color:#800000;
+}
+
+#ddh
+{
+	background-color:#800000;
+}
+
+div.row ol.breadcrumb
+{
+	background-color:#F0F0F0;
+}
+
+hr{border-bottom: 1px solid #DCDCDC;}
+
+#center
+{
+	text-align:center;
+}

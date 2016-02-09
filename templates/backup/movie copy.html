@@ -1,0 +1,121 @@
+$def with (movie)
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Movie Site</title>
+
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/movie_style.css" rel="stylesheet">
+	
+	</head>
+
+	<body>
+
+	<!--导航栏 -->		
+    <nav class="navbar navbar-default navbar-fixed-top" id="dh"role="navigation">
+      <div class="container">
+        <div class="col-md-6 col-md-offset-1">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" id="dh">Stanley Movie</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="pull-right">
+          <form class="navbar-form navbar-left"role="search" action="/" method="post" >
+            <div class="form-group">
+              <div class="center-block" >
+              <input type="text" name="title" class="form-control" placeholder="Movie Name" >
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default" >Search</button>
+          </form>
+        </div>
+        </div>
+      </div>
+    </nav>
+
+	<!--页头 -->
+    <div class="jumbotron" id="ddh" >
+      <div class="container">
+      	<div class="col-md-10 col-md-offset-1">
+          <h2>$movie.title</h2>
+          <p>$movie.origin</p>
+         </div>
+      </div>
+    </div>
+	
+	<!--页面主题内容 -->
+    <div class="container" >
+    <div class="row">
+	  <!--左边栏 -->
+      <div class="col-md-7 col-md-offset-1">
+        <!--路径导航 -->
+        <div class="row">
+          <ol class="breadcrumb">
+            <li><a href="/">表格式</a> OR <a href="/card">卡片式</a></li>
+            <li class="active">$movie.title</li>
+          </ol>
+        </div>  
+		    <!--表格 -->		
+		    <div class="row">
+          <div class="col-md-12">
+  			    <div class="table-responsive">
+              <table class="table">
+                <tr>
+                  <td>国家</td>
+                  <td>年份</td> 
+                  <td>类型</td> 
+                  <td>评分</td>
+                </tr>
+                <tr>
+                  <td><h3>$movie.countries</h3></td>
+                  <td><h3>$movie.year</h3></td> 
+                  <td><h3>$movie.genres</h3></td> 
+                  <td><h3>$movie.rating</h3></td>
+                </tr>
+              </table>
+            </div>
+		      </div>
+		    </div>
+		    <!--简介 -->
+	      <div class="row">
+      	  <div class="col-md-12 ">
+			      <hr id="hr">
+			      <br>
+            <h id="summary">$movie.summary</h>
+		      </div>
+	      </div>
+      </div>
+      <!--右边栏 -->
+      <div class="col-md-3">
+        <img src="/static/poster/$(movie.id).jpg">
+      </div>
+	</div>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/static/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+	</body>
+
+</html>

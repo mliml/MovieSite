@@ -1,0 +1,1 @@
+create table user (id,email,username,password,sex);

@@ -1,0 +1,41 @@
+div.jumbotron div.container h2
+{
+	color:#DCDCDC;
+}
+
+div.jumbotron div.container p
+{
+	color:#DCDCDC;
+}
+
+
+body
+{
+	background-color:#F0F0F0;
+	padding-top: 50px;
+}
+
+#dh
+{
+	background-color:#DCDCDC;
+	color:#800000;
+}
+
+#ddh
+{
+	background-color:#800000;
+}
+
+#summary
+{
+	line-height: 220%
+}
+
+hr{border-bottom: 1px solid #DCDCDC;}
+
+div.row ol.breadcrumb
+{
+	background-color:#F0F0F0;
+}
+
+

@@ -1,0 +1,42 @@
+$def with (movies)
+$var css: /static/css/style.css
+
+    <!--头图 -->
+    <div class="jumbotron" id="ddh" >
+      <div class="container">
+          </br></br></br>
+          <h1>Movie Site</h1>
+          <h3>Data from Douban</h3>
+          </br></br></br>
+      </div>
+    </div>
+    
+    <!--表格 -->
+    <div class="container">
+      <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Origin</th>
+                  <th>Year</th> 
+                  <th>Rating</th> 
+                  <th>Country</th>
+                </tr>
+                $for movie in movies:
+                  <tr>
+                    <td>$movie['no']</td>
+                    <td><a href="movie/$movie['id']">$movie['title']</a></td>
+                    <td>$movie['origin']</td>
+                    <td>$movie['year']</td> 
+                    <td>$movie['rating']</td> 
+                    <td>$movie['countries']</td>
+                  </tr>
+            </div> <!-- table-responsive -->  
+
+          </table>
+        </div> <!-- col-md-8 -->
+      </div> <!-- row -->
+    </div> <!-- container -->
